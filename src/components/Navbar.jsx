@@ -7,7 +7,7 @@ const Navbar = () => {
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
     return (
-        <nav className="w-full h-20 px-4 sm:px-12 py-6 border-b border-black flex justify-between items-center relative">
+        <nav className="w-full h-20 px-8 sm:px-12 py-6 border-b border-black flex justify-between items-center relative">
             <div className="flex items-center space-x-2">
                 <span className="text-zinc-800 text-xl sm:text-2xl font-normal font-epilogue leading-loose">Kaushik</span>
                 <span className="text-zinc-800 text-xl sm:text-2xl font-semibold font-epilogue leading-loose">Indukuri</span>

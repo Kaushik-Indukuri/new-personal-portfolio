@@ -3,7 +3,7 @@ import WorkCard from './elements/WorkCard';
 
 const WorkExperience = () => {
     return (
-        <div className="w-full h-auto px-36 py-10">
+        <div className="w-full h-auto px-8 sm:px-16 md:px-16 lg:px-36 py-10">
             <div className="flex items-center py-8">
                 <div className="flex-grow border-t-2 border-gray-300"></div>
                 <div className="flex items-center justify-center -mt-px">

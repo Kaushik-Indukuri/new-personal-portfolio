@@ -52,7 +52,7 @@ export default {
             {},
         },
         ".body-1": {
-          "@apply text-zinc-800 text-2xl font-normal leading-loose":
+          "@apply text-zinc-800 font-normal":
             {},
         },
         ".body-2": {
