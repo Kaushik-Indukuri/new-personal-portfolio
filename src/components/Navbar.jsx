@@ -15,9 +15,9 @@ const Navbar = () => {
 
             {/* Desktop Menu - Centered on large screens */}
             <div className="hidden lg:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 space-x-12">
-                <Link to="/" className="nav-txt">About</Link>
-                <Link to="/projects" className="nav-txt">Projects</Link>
-                <Link to="/writing" className="nav-txt">Writing</Link>
+                <Link to="/" className="nav-txt hover:text-zinc-400">About</Link>
+                <Link to="/projects" className="nav-txt hover:text-zinc-400">Projects</Link>
+                <Link to="/writing" className="nav-txt hover:text-zinc-400">Writing</Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -33,9 +33,9 @@ const Navbar = () => {
                 className={`absolute top-full right-0 w-48 bg-white border border-black shadow-lg lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
                     }`}
             >
-                <Link to="/" className="block px-4 py-2 hover:bg-gray-100">About</Link>
-                <Link to="/projects" className="block px-4 py-2 hover:bg-gray-100">Projects</Link>
-                <Link to="/writing" className="block px-4 py-2 hover:bg-gray-100">Writing</Link>
+                <Link to="/" className="block px-4 py-2 hover:text-zinc-500">About</Link>
+                <Link to="/projects" className="block px-4 py-2 hover:text-zinc-500">Projects</Link>
+                <Link to="/writing" className="block px-4 py-2 hover:text-zinc-500">Writing</Link>
             </div>
         </nav>
     );

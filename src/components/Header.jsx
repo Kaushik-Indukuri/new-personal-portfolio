@@ -9,7 +9,7 @@ const Header = () => {
                         Hello! I'm Kaushik
                     </div>
                     <div className="w-full body-1 leading-relaxed md:leading-loose text-xl md:text-2xl px-0 sm:px-8 md:px-16 xl:px-0 text-center xl:text-left">
-                        I'm a fourth-year student at UIUC pursuing a degree in Computer Engineering. I'm interested in parallel programming, compilers, and parallel computer architecture and am always looking for new opportunities in these fields.
+                        I'm a fourth-year student at UIUC pursuing a degree in Computer Engineering. I'm interested in parallel programming, compilers, and distributed systems and am always looking for new opportunities in these fields.
                     </div>
                     <div className="w-full body-2 text-center xl:text-left">
                         Resume is available here.
