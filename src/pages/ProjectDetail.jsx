@@ -9,27 +9,38 @@ const ProjectDetail = () => {
     // This is just a mock-up for demonstration purposes
     const getProjectDetails = (id) => {
         const projects = {
-            'youtube-comments-analytics': {
-                title: "Youtube Comments Analytics",
+            'youtube-comments-dashboard': {
+                title: "Youtube Comments Dashboard",
                 date: "Jul - Aug 2024",
                 description: (
                     <>
                         <p className="mb-5">
-                            Fanua is a mobile application designed to connect investors interested in co-investing in properties. The app offers a comprehensive messaging system and sophisticated property search filters, enabling users to effortlessly locate investment opportunities and communicate with potential co-investors directly within the platform.
+                            This web platform provides comprehensive insights into the comments of YouTube videos. By inputting a YouTube video link, users can explore a wide range of metrics and visualizations, enabling them to understand viewer engagement and sentiment better. The platform leverages modern cloud infrastructure and scalable microservices to deliver real-time analytics.
                         </p>
                         <p className="mb-5">
-                            The application's user interface is built using Flutter, allowing for a seamless and responsive user experience across both android and iOS platforms. A Python web server is employed to handle data retrieval and analysis. This server interacts with the Realtor API to fetch real estate data, which is then processed and analyzed to provide insightful information to users. Firebase is integrated for its robust messaging services and user authentication capabilities. This ensures secure and efficient communication between users without the need for page refreshes, enhancing the real-time interaction experience. The application uses advanced filtering mechanisms to query and update property data based on user requests, providing tailored search results and investment opportunities.
+                            <strong>Key Features:</strong>
+                            <ul>Like/Dislike Ratio: Understand the general viewer sentiment towards the video</ul>
+                            <ul>Engagement Ratio: Analyze the ratio of comments, likes, and threads to total viewers, indicating viewer engagement</ul>
+                            <ul>Sentiment Distribution: Categorize comments as positive, negative, or neutral</ul>
+                            <ul>Intent Classification: Classify comments into feedback, requests, and complaints</ul>
+                            <ul>Keyword Cloud: Visualize the most frequently seen keywords in the comments</ul>
+                            <ul>Comments by Region: A pie chart showing the geographic distribution of commenters</ul>
+                            <ul>Sentiment Distribution Over Time: Track how sentiment changes over the video's lifespan</ul>
+                            <ul>Comments Posted Over Time: Monitor the volume of comments over time</ul>
+                        </p>
+                        <p className="mb-5">
+                            <strong>Architecture and Workflow:</strong>
+                            <ul>The project consists of a React and Tailwind frontend where the user starts by inputting a YouTube video link and clicking analyze. Upon submission, a Kafka producer streams video omments and metadata to Kafka topics. Multiple Kafka consumers then analyze these comments: one for sentiment analysis, another for intent classification, a third for keyword extraction, a fourth for geographic analysis, and a fifth for temporal analysis. Terraform scripts set up Kafka clusters on AWS EC2 for efficient streaming. Each consumer is containerized with Docker and managed by Kubernetes to ensure scaling and resource utilization. Processed data is stored in MongoDB, which the frontend queries to provide real-time analytics.</ul>
 
                         </p>
-                        <p className="mb-5">
-                            Some major challenges I encountered were implementing a real-time messaging system and querying and dynamically updating data from the Realtor API. I had to ensure messages were updated instantly without requiring users to refresh the app and conducted extensive troubleshooting to handle user requests such as applying complex property filters.
-                        </p>
                         <p className="mb-10">
-                            You can find the source code on GitHub <a href="https://github.com/Kaushik-Indukuri/fanua" className="text-blue-600 hover:underline">here</a> and a Devpost submission with a demo video <a href="https://devpost.com/software/fanua-real-estate" className="text-blue-600 hover:underline">here</a>.
+                            You can find the source code on GitHub <a href="https://github.com/Kaushik-Indukuri/youtube-comments-dashboard" className="text-blue-600 hover:underline">here</a>
                         </p>
                     </>
                 ),
                 technologies: "React, TypeScript, Tailwind, Python, Kafka, Node.js, Docker, K8s, Terraform, Github Actions",
+                image: "../src/assets/yt_detail.png",
+
             },
             'http-client-server': {
                 title: "HTTP Client & Server",
@@ -215,16 +226,16 @@ const ProjectDetail = () => {
     return (
         <div className="flex flex-col md:flex-row gap-12  w-full py-24 px-8 sm:px-16 md:px-16 lg:px-36">
             <div className="flex-1 leading-7">
-                <h1 className="text-4xl font-semibold mb-2">{project.title}</h1>
+                <h1 className="text-3xl lg:text-4xl font-semibold mb-2">{project.title}</h1>
                 <h2 className="text-xl text-gray-600 mb-5">{project.date}</h2>
 
                 <div>{project.description}</div>
 
-                <Link to="/projects">
+                <a href="/projects">
                     <button className="rounded-full border border-[#333333] px-5 py-1.5 text-gray-800 hover:bg-[#333333] hover:text-white transition duration-300">
                         Return to Projects
                     </button>
-                </Link>
+                </a>
             </div>
 
             <div className="flex-1">

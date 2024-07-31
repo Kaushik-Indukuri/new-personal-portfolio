@@ -7,10 +7,10 @@ const Projects = () => {
             <h2 className="text-center h3 mb-8 md:mb-14">💾 PROJECTS</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16 md:gap-12 lg:gap-20">
                 <ProjectCard
-                    projectId="youtube-comments-analytics"
+                    projectId="youtube-comments-dashboard"
                     imgSrc="./src/assets/yt_art.png"
-                    projectTitle="Youtube Comments Analytics"
-                    technologies="React, TypeScript, Tailwind, Python, Kafka, Node.js, Docker, K8s, Terraform, Github Actions"
+                    projectTitle="Youtube Comments Dashboard"
+                    technologies="React, TypeScript, Tailwind, MongoDB, Kafka, Python, FastAPI, Docker, K8s, Terraform, Github Actions"
                 />
                 <ProjectCard
                     projectId="http-client-server"
