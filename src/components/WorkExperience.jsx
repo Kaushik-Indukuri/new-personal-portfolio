@@ -16,7 +16,7 @@ const WorkExperience = () => {
             <div className="w-full h-auto flex-col  justify-center items-center gap-10 inline-flex py-10">
                 <WorkCard
                     logoSrc="/assets/iti_logo.png"
-                    title="Research Intern @ Information Trust Institute"
+                    title="Software Engineer Intern @ Information Trust Institute"
                     description="Integrating Keycloak to account authentication and provisioning system for additional security layer and implementing OpenID Connect protocol for single-sign on"
                 />
                 <WorkCard
