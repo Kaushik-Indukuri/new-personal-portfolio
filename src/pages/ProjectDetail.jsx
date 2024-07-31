@@ -1,6 +1,8 @@
 import { data } from 'autoprefixer';
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { TriangleAlert } from 'lucide-react';
+
 
 const ProjectDetail = () => {
     const { projectId } = useParams();
@@ -220,7 +222,10 @@ const ProjectDetail = () => {
     const project = getProjectDetails(projectId);
 
     if (!project) {
-        return <div>Project not found</div>;
+        return <div className='flex flex-col gap-5 items-center py-24'>
+            <TriangleAlert size={90} strokeWidth={1} />
+            <h1 className='text-3xl font-light'>Project not found</h1>
+        </div>;
     }
 
     return (

@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import { createBrowserRouter, RouterProvider, ScrollRestoration } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider, ScrollRestoration, Navigate } from 'react-router-dom'
 import ProjectsPage from './pages/ProjectsPage'
 import HomePage from './pages/HomePage'
 import WritingPage from './pages/WritingPage'
@@ -41,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: 'writing/:blogId',
         element: <BlogPost />,
+      },
+      {
+        path: '*',
+        element: <Navigate to="/" />, // This will catch all undefined routes and redirect to the home page
       },
     ],
   },

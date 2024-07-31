@@ -1,5 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { TriangleAlert } from 'lucide-react';
+
 
 const BlogPost = () => {
     const { blogId } = useParams();
@@ -45,7 +47,10 @@ const BlogPost = () => {
     const post = getBlogPost(blogId);
 
     if (!post) {
-        return <div>Post not found</div>;
+        return <div className='flex flex-col gap-5 items-center py-24'>
+            <TriangleAlert size={90} strokeWidth={1} />
+            <h1 className='text-3xl font-light'>Post not found</h1>
+        </div>;
     }
 
     const renderText = (text) => {
