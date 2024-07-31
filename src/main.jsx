@@ -7,6 +7,7 @@ import ProjectsPage from './pages/ProjectsPage'
 import HomePage from './pages/HomePage'
 import WritingPage from './pages/WritingPage'
 import ProjectDetail from './pages/ProjectDetail'
+import BlogPost from './pages/BlogPost'
 
 
 
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: 'writing',
         element: <WritingPage />,
+      },
+      {
+        path: 'writing/:blogId',
+        element: <BlogPost />,
       },
     ],
   },
