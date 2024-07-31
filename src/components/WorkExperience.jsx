@@ -15,17 +15,17 @@ const WorkExperience = () => {
             </div>
             <div className="w-full h-auto flex-col  justify-center items-center gap-10 inline-flex py-10">
                 <WorkCard
-                    logoSrc="./src/assets/iti_logo.png"
+                    logoSrc="/assets/iti_logo.png"
                     title="Research Intern @ Information Trust Institute"
                     description="Integrating Keycloak to account authentication and provisioning system for additional security layer and implementing OpenID Connect protocol for single-sign on"
                 />
                 <WorkCard
-                    logoSrc="./src/assets/uscellular_logo.png"
+                    logoSrc="/assets/uscellular_logo.png"
                     title="Integration API Development Intern @ UScellular"
                     description="Architected and developed a RESTful micro-service with Spring Boot and Apache Camel, allowing consumers to setup a security question during account creation. Migrated 100k+ JMS messages from Oracle DB to Open MQ"
                 />
                 <WorkCard
-                    logoSrc="./src/assets/winfo_logo.png"
+                    logoSrc="/assets/winfo_logo.png"
                     title="Software Test Engineer Intern @ Winfo Solutions"
                     description="Implemented a feature using Java Access Bridge and Accessibility API to facilitate interactions with Java applets in Oracle E-Business Suite, allowing for testing of third-party EBS integrations"
                 />

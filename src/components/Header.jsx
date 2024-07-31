@@ -15,7 +15,7 @@ const Header = () => {
                         Resume is available here.
                     </div>
                 </div>
-                <img className="w-auto h-auto mt-8 lg:mt-0" src="./src/assets/portfolio_header.png" alt="Profile" />
+                <img className="w-auto h-auto mt-8 lg:mt-0" src="/assets/portfolio_header.png" alt="Profile" />
             </div>
         </div>
     )
