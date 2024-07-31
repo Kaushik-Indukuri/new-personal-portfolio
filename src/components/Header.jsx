@@ -12,7 +12,7 @@ const Header = () => {
                         I'm a fourth-year student at UIUC pursuing a degree in Computer Engineering. I'm interested in parallel programming, compilers, and distributed systems and am always looking for new opportunities in these fields.
                     </div>
                     <div className="w-full body-2 text-center xl:text-left">
-                        Resume is available here.
+                        <a href="https://drive.google.com/file/d/1WET6q3-pGNioepnuTfaEILcDDWlyBzOI/view?usp=sharing">Resume is available here</a>
                     </div>
                 </div>
                 <img className="w-auto h-auto mt-8 lg:mt-0" src="/assets/portfolio_header.png" alt="Profile" />
