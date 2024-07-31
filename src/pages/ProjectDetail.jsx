@@ -39,7 +39,7 @@ const ProjectDetail = () => {
                     </>
                 ),
                 technologies: "React, TypeScript, Tailwind, Python, Kafka, Node.js, Docker, K8s, Terraform, Github Actions",
-                image: "../src/assets/yt_detail.png",
+                image: "/assets/yt_detail.png",
 
             },
             'http-client-server': {
@@ -69,7 +69,7 @@ const ProjectDetail = () => {
                     </>
                 ),
                 technologies: "C, Socket Programming, Linux",
-                image: "../src/assets/http_detail.png",
+                image: "/assets/http_detail.png",
             },
             'lenet-acceleration': {
                 title: "LeNet-5 Neural Network GPU Acceleration",
@@ -92,7 +92,7 @@ const ProjectDetail = () => {
                     </>
                 ),
                 technologies: "C, CUDA, Nsight-Compute",
-                image: "../src/assets/lenet_detail.png",
+                image: "/assets/lenet_detail.png",
             },
             'linux-operating-system': {
                 title: "Linux Operating System",
@@ -119,7 +119,7 @@ const ProjectDetail = () => {
                     </>
                 ),
                 technologies: "C, x86 Assembly, Linux",
-                image: "../src/assets/os_detail.png",
+                image: "/assets/os_detail.png",
             },
             'stock-sentiment-api': {
                 title: "Stock Sentiment API",
@@ -141,7 +141,7 @@ const ProjectDetail = () => {
                     </>
                 ),
                 technologies: "Python, FastAPI, Pandas, Numpy, BeautifulSoup, Docker, AWS Lambda",
-                image: "../src/assets/stock_detail.png",
+                image: "/assets/stock_detail.png",
             },
             'airport-route-finder': {
                 title: "Airport Route Finder",
@@ -165,7 +165,7 @@ const ProjectDetail = () => {
                     </>
                 ),
                 technologies: "C++, CMake, Docker",
-                image: "../src/assets/routes_detail.png",
+                image: "/assets/routes_detail.png",
             },
             'inspeech': {
                 title: "InSpeech",
@@ -187,7 +187,7 @@ const ProjectDetail = () => {
                     </>
                 ),
                 technologies: "Flutter, Firebase, Speech-to-Text, Web Speech API",
-                image: "../src/assets/inspeech_detail.png",
+                image: "/assets/inspeech_detail.png",
             },
             'fanua': {
                 title: "Fanua",
@@ -210,7 +210,7 @@ const ProjectDetail = () => {
                     </>
                 ),
                 technologies: "Flutter, Flask, Firebase, Realtor API, Docker, AWS EC2",
-                image: "../src/assets/fanua_detail.png",
+                image: "/assets/fanua_detail.png",
             },
         };
 
