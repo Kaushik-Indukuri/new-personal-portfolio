@@ -26,7 +26,7 @@ const WorkExperience = () => {
                 />
                 <WorkCard
                     logoSrc="/assets/winfo_logo.png"
-                    title="Software Test Engineer Intern @ Winfo Solutions"
+                    title="Software Engineer Intern @ Winfo Solutions"
                     description="Implemented a feature using Java Access Bridge and Accessibility API to facilitate interactions with Java applets in Oracle E-Business Suite, allowing for testing of third-party EBS integrations"
                 />
             </div >
