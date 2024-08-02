@@ -27,7 +27,7 @@ const Projects = () => {
                 <ProjectCard
                     projectId="linux-operating-system"
                     imgSrc="/assets/linux_os.png"
-                    projectTitle="Linux Operating System"
+                    projectTitle="Linux-like Operating System"
                     technologies="C, x86 Assembly, Linux"
                 />
                 <ProjectCard

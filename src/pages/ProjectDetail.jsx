@@ -97,7 +97,7 @@ const ProjectDetail = () => {
                 image: "/assets/lenet_detail.png",
             },
             'linux-operating-system': {
-                title: "Linux Operating System",
+                title: "Linux-like Operating System",
                 date: "Apr - May 2023",
                 description: (
                     <>
