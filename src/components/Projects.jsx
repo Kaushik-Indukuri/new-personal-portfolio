@@ -10,7 +10,7 @@ const Projects = () => {
                     projectId="youtube-comments-dashboard"
                     imgSrc="/assets/yt_art.png"
                     projectTitle="Youtube Comments Dashboard"
-                    technologies="React, TypeScript, Tailwind, MongoDB, Kafka, Python, FastAPI, Docker, K8s, Terraform, Github Actions, AWS"
+                    technologies="React, TypeScript, Tailwind, MongoDB, Kafka, Python, FastAPI, Docker, K8s, Terraform, Github Actions, AWS, NLP"
                 />
                 <ProjectCard
                     projectId="http-client-server"
@@ -34,7 +34,7 @@ const Projects = () => {
                     projectId="stock-sentiment-api"
                     imgSrc="/assets/stock_api.png"
                     projectTitle="Stock Sentiment API"
-                    technologies="Python, FastAPI, Pandas, Numpy, BeautifulSoup, Docker, AWS Lambda"
+                    technologies="Python, FastAPI, NLTK, Pandas, Numpy, BeautifulSoup, Docker, AWS Lambda"
                 />
                 <ProjectCard
                     projectId="airport-route-finder"
