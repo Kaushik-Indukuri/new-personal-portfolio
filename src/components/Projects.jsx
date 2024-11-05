@@ -10,7 +10,7 @@ const Projects = () => {
                     projectId="youtube-comments-dashboard"
                     imgSrc="/assets/yt_art.png"
                     projectTitle="Youtube Comments Dashboard"
-                    technologies="React, TypeScript, Tailwind, MongoDB, Kafka, Python, FastAPI, Docker, K8s, Terraform, Github Actions, AWS, NLP"
+                    technologies="React, TypeScript, Tailwind, Kafka, Python, FastAPI, MongoDB, Docker, K8s, Terraform, AWS, NLTK"
                 />
                 <ProjectCard
                     projectId="http-client-server"
