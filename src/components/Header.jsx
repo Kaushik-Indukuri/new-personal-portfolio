@@ -12,7 +12,7 @@ const Header = () => {
                         I'm a fourth-year student at UIUC pursuing a degree in Computer Engineering. I'm passionate about AI applications, HPC, operating systems, and distributed computing, and I'm continually seeking new opportunities to explore and contribute to these fields.
                     </div>
                     <div className="w-full body-2 text-center xl:text-left">
-                        <a href="https://drive.google.com/file/d/1WET6q3-pGNioepnuTfaEILcDDWlyBzOI/view?usp=sharing">Resume is available here</a>
+                        <a href="https://drive.google.com/file/d/19DwLxnXePa7D5CSeBwdoUwUu8ObH6JFN/view?usp=sharing">Resume is available here</a>
                     </div>
                 </div>
                 <img className="w-auto h-auto mt-8 lg:mt-0" src="/assets/portfolio_header.png" alt="Profile" />
