@@ -32,15 +32,19 @@ const ProjectDetail = () => {
                         </p>
                         <p className="mb-5">
                             <strong>Architecture and Workflow:</strong>
-                            <ul>The project consists of a React and Tailwind frontend where the user starts by inputting a YouTube video link and clicking analyze. Upon submission, a Kafka producer streams video omments and metadata to Kafka topics. Multiple Kafka consumers then analyze these comments: one for sentiment analysis, another for intent classification, a third for keyword extraction, a fourth for geographic analysis, and a fifth for temporal analysis. Terraform scripts set up Kafka clusters on AWS EC2 for efficient streaming. Each consumer is containerized with Docker and managed by Kubernetes to ensure scaling and resource utilization. Processed data is stored in MongoDB, which the frontend queries to provide real-time analytics.</ul>
-
+                            <ul>1. Frontend (React + Tailwind): The frontend sends the video link to a backend API endpoint, which triggers the Kafka producer and initiates the data processing pipeline.</ul>
+                            <ul>2. Backend API and Kafka Producer: The Kafka producer fetches the video's comments and metadata from the YouTube Data API. The producer streams the retrieved comment data to various Kafka topics set up on AWS EC2 clusters. Topics are created for each type of analysis: sentiment, intent, keyword, geographic, and temporal.</ul>
+                            <ul>3. Kafka Consumers for Data Analysis: Each Kafka consumer subscribes to a designated topic to perform specific analyses. The consumers are Python services that use the NLTK library to perform the appropriate functions.</ul>
+                            <ul>4. Containerization and Orchestration (Docker + Kubernetes): Each consumer is containerized with Docker, allowing for a consistent environment across deployments. Kubernetes orchestrates the containers, ensuring that consumers scale based on the load (e.g., spikes in comments)</ul>
+                            <ul>5. Data Storage (MongoDB): After analysis, each consumer writes the processed data to MongoDB. Sentiment scores, keywords, intents, geographic distributions, and temporal insights are stored in collections within MongoDB. The frontend queries MongoDB for real-time analytics display.</ul>
+                            <ul>6. Infrastructure Setup (Terraform on AWS): Terraform is used to set up and manage the infrastructure on AWS, specifically EC2 instances that host the Kafka clusters.</ul>
                         </p>
                         <p className="mb-10">
                             You can find the source code on GitHub <a href="https://github.com/Kaushik-Indukuri/youtube-comments-dashboard" className="text-blue-600 hover:underline">here</a>
                         </p>
                     </>
                 ),
-                technologies: "React, TypeScript, Tailwind, Python, Kafka, Node.js, Docker, K8s, Terraform, Github Actions",
+                technologies: "React, TypeScript, Tailwind, Python, Kafka, Node.js, Docker, K8s, Terraform, NLTK",
                 image: "/assets/yt_detail.png",
 
             },
