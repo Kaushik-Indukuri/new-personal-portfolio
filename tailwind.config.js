@@ -27,6 +27,7 @@ export default {
     },
   },
   plugins: [
+    require('@tailwindcss/typography'),
     addIconSelectors(['mdi', 'mdi-light']),
     plugin(function ({ addBase, addComponents, addUtilities }) {
       addBase({});

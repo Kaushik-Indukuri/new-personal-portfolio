@@ -7,8 +7,6 @@ import { TriangleAlert } from 'lucide-react';
 const ProjectDetail = () => {
     const { projectId } = useParams();
 
-    // In a real application, you would fetch project details based on the projectId
-    // This is just a mock-up for demonstration purposes
     const getProjectDetails = (id) => {
         const projects = {
             'youtube-comments-dashboard': {

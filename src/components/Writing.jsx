@@ -10,7 +10,7 @@ const Writing = () => {
                 <div className="w-full flex-col justify-start items-start gap-10 sm:gap-9 md:gap-7 flex">
                     <ArticleCard
                         blogId="ece408"
-                        articleTitle="ECE408: Why Applied Parallel Programming is My Favorite Course at UIUC"
+                        articleTitle="GPU-Based Parallel Programming: My Insights From the ECE408 Course at UIUC"
                         date="May 18, 2024"
                         readTime="7 min"
                     />
