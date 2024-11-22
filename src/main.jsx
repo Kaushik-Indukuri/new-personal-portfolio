@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
+import { useLocation } from 'react-router-dom'
 import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider, ScrollRestoration, Navigate } from 'react-router-dom'
@@ -9,7 +10,19 @@ import WritingPage from './pages/WritingPage'
 import ProjectDetail from './pages/ProjectDetail'
 import BlogPost from './pages/BlogPost'
 
+const TrackPageView = () => {
+  const location = useLocation()
 
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag('config', 'G-HGPBC7BKJ3', {
+        page_path: location.pathname,
+      })
+    }
+  }, [location])
+
+  return null
+}
 
 const router = createBrowserRouter([
   {
@@ -18,8 +31,8 @@ const router = createBrowserRouter([
       <>
         <App />
         <ScrollRestoration />
+        <TrackPageView />
       </>
-
     ),
     children: [
       {
@@ -44,11 +57,11 @@ const router = createBrowserRouter([
       },
       {
         path: '*',
-        element: <Navigate to="/" />, // This will catch all undefined routes and redirect to the home page
+        element: <Navigate to="/" />,
       },
     ],
   },
-]);
+])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
