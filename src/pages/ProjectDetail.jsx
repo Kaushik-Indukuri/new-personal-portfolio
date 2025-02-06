@@ -9,6 +9,31 @@ const ProjectDetail = () => {
 
     const getProjectDetails = (id) => {
         const projects = {
+            'cool-compiler-lexer-parser': {
+                title: "Lexer & Parser for COOL Compiler",
+                date: "Oct 2024",
+                description: (
+                    <>
+                        <p className="mb-5">
+                            In this compiler project, I developed a robust front-end implementation for the Classroom Object-Oriented Language (COOL). The project focused on building two critical components of a compiler's front-end: a lexer and a parser, which together transform source code into an Abstract Syntax Tree (AST) representation.
+                        </p>
+
+                        <p className='mb-5'>
+                        The lexer, implemented using Flex, handles the initial phase of compilation by breaking down source code into meaningful tokens. I extended the basic COOL language specification to support additional features including hexadecimal number literals and Python-style multi-line strings. My implementation includes sophisticated error handling mechanisms for various edge cases such as unterminated strings, invalid characters, and EOF conditions in comments. The lexer also maintains line number tracking for precise error reporting and utilizes a string table implementation for efficient token management.
+                        </p>
+
+                        <p className='mb-5'>
+                        The parser component, built using Bison, implements COOL's context-free grammar and constructs an Abstract Syntax Tree representation of the program. A key challenge was handling the inherent ambiguity in COOL's let expressions, which I resolved using careful precedence declarations. The parser includes robust error recovery mechanisms that allow it to continue processing input after encountering syntax errors, particularly in class definitions, feature declarations, and let bindings. I also implemented support for C-style for loops as an extension to the original COOL grammar
+                        </p>
+
+                        <p className="mb-10">
+                            You can find the source code on GitHub <a href="https://github.com/Kaushik-Indukuri/cool-lexer-parser" className="text-blue-600 hover:underline">here</a>
+                        </p>
+                    </>
+                ),
+                technologies: "C++, Bison, Flex, RegEx",
+                image: "/assets/lp_detail.png",
+            },
             'youtube-comments-dashboard': {
                 title: "Youtube Comments Dashboard",
                 date: "Jul - Aug 2024",

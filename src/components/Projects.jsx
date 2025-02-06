@@ -7,6 +7,12 @@ const Projects = () => {
             <h2 className="text-center h3 mb-8 md:mb-14">💾 PROJECTS</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16 md:gap-12 lg:gap-20">
                 <ProjectCard
+                    projectId="cool-compiler-lexer-parser"
+                    imgSrc="/assets/lp_art.png"
+                    projectTitle="Lexer & Parser for COOL Compiler"
+                    technologies="C++, Bison, Flex, RegEx"
+                />
+                <ProjectCard
                     projectId="youtube-comments-dashboard"
                     imgSrc="/assets/yt_art.png"
                     projectTitle="Youtube Comments Dashboard"
