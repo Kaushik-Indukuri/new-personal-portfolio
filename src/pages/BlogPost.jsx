@@ -51,9 +51,9 @@ const BlogPost = () => {
                 const { title, date, read_time, body } = parseFrontmatter(content);
 
                 setPost({
-                    title,
-                    date,
-                    read_time,
+                    title: title.slice(1, -1),
+                    date: date,
+                    read_time: read_time,
                     content: body
                 });
             } catch (err) {
