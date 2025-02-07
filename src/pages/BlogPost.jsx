@@ -4,6 +4,8 @@ import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { TriangleAlert, Loader2 } from 'lucide-react';
+import remarkGfm from 'remark-gfm';
+import remarkBreaks from 'remark-breaks';
 
 const BlogPost = () => {
     const { blogId } = useParams();
@@ -17,20 +19,12 @@ const BlogPost = () => {
                 setLoading(true);
                 setError(null);
 
-                // Replace these with your GitHub repository details
                 const owner = 'kaushik-indukuri';
                 const repo = 'personal-blog-posts';
-                const path = `${blogId}.md`; // Assuming posts are stored as .md files
+                const path = `${blogId}.md`;
 
-                // First, fetch the file metadata to get the SHA
                 const metadataResponse = await fetch(
-                    `https://api.github.com/repos/${owner}/${repo}/contents/${path}`,
-                    {
-                        headers: {
-                            // Add your GitHub token if needed
-                            // 'Authorization': 'token your-github-token'
-                        }
-                    }
+                    `https://api.github.com/repos/${owner}/${repo}/contents/${path}`
                 );
 
                 if (!metadataResponse.ok) {
@@ -38,16 +32,13 @@ const BlogPost = () => {
                 }
 
                 const metadata = await metadataResponse.json();
-                
-                // Fetch the actual content
                 const contentResponse = await fetch(metadata.download_url);
+                
                 if (!contentResponse.ok) {
                     throw new Error('Failed to fetch post content');
                 }
 
                 const content = await contentResponse.text();
-
-                // Parse frontmatter from markdown content
                 const { title, date, read_time, body } = parseFrontmatter(content);
 
                 setPost({
@@ -66,7 +57,6 @@ const BlogPost = () => {
         fetchPost();
     }, [blogId]);
 
-    // Helper function to parse frontmatter from markdown
     const parseFrontmatter = (content) => {
         const frontmatterRegex = /---\n([\s\S]*?)\n---\n([\s\S]*)/;
         const match = content.match(frontmatterRegex);
@@ -83,7 +73,6 @@ const BlogPost = () => {
         const frontmatter = match[1];
         const body = match[2];
 
-        // Parse YAML-style frontmatter
         const metadata = {};
         frontmatter.split('\n').forEach(line => {
             const [key, ...value] = line.split(':');
@@ -124,8 +113,11 @@ const BlogPost = () => {
             <div className="text-gray-600 mb-8">
                 <span>{post.date}</span> • <span>{post.read_time}</span>
             </div>
-            <div className="prose prose-lg prose-slate max-w-none">
+            <div className="prose prose-lg prose-slate max-w-none 
+                          prose-table:border-collapse prose-td:border prose-td:border-gray-300 prose-td:p-2
+                          prose-th:border prose-th:border-gray-300 prose-th:p-2 prose-th:bg-gray-100">
                 <ReactMarkdown
+                    remarkPlugins={[remarkGfm, remarkBreaks]}
                     components={{
                         img: ({ node, ...props }) => (
                             <img
@@ -151,6 +143,11 @@ const BlogPost = () => {
                                 </code>
                             );
                         },
+                        table: ({node, ...props}) => (
+                            <div className="overflow-x-auto my-8">
+                                <table {...props} className="min-w-full" />
+                            </div>
+                        ),
                     }}
                 >
                     {post.content}
