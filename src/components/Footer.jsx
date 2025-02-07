@@ -13,16 +13,16 @@ const Footer = () => {
                 </p>
                 <div className="flex justify-center items-center gap-5 text-3xl">
                     <a href="https://www.linkedin.com/in/kaushik-indukuri/" target="_blank" className="text-zinc-800 hover:text-zinc-600">
-                        <span class="iconify mdi--linkedin"></span>
+                        <span className="iconify mdi--linkedin"></span>
                     </a>
                     <a href="https://github.com/kaushik-Indukuri" target="_blank" className="text-zinc-800 hover:text-zinc-600">
-                        <span class="iconify mdi--github"></span>
+                        <span className="iconify mdi--github"></span>
                     </a>
                     <a href="https://www.instagram.com/kaushik.indukuri/" target="_blank" className="text-zinc-800 hover:text-zinc-600">
-                        <span class="iconify mdi--instagram"></span>
+                        <span className="iconify mdi--instagram"></span>
                     </a>
                     <a href="mailto:kvi3@illinois.com" className="text-zinc-800 hover:text-zinc-600">
-                        <span class="iconify mdi--email"></span>
+                        <span className="iconify mdi--email"></span>
                     </a>
                 </div>
             </div>

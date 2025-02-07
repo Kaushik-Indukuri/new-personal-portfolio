@@ -9,7 +9,7 @@ const Writing = () => {
                 <div className="text-zinc-800 h3">📑 WRITING </div>
                 <div className="w-full flex-col justify-start items-start gap-10 sm:gap-9 md:gap-7 flex">
                     <ArticleCard
-                        blogId="ece408"
+                        blogId="my-insights-from-ece408"
                         articleTitle="GPU-Based Parallel Programming: My Insights From the ECE408 Course at UIUC"
                         date="May 18, 2024"
                         readTime="7 min"
