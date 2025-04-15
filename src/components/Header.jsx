@@ -12,7 +12,7 @@ const Header = () => {
                     I’m passionate about building—whether it’s tech, ideas, or communities—and embracing every opportunity to learn and grow. I spend my time seeking out moments that bring joy and connection. If this resonates with you, I’d love to connect!
                     </div>
                     <div className="w-full body-2 text-center xl:text-left">
-                        <a href="https://drive.google.com/file/d/19DwLxnXePa7D5CSeBwdoUwUu8ObH6JFN/view?usp=sharing">Resume is available here</a>
+                        <a href="https://drive.google.com/file/d/11KMkjP5brMhl3aSEoGMbq5_B67du001I/view?usp=sharing">Resume is available here</a>
                     </div>
                 </div>
                 <img className="w-auto h-auto mt-8 lg:mt-0" src="/assets/portfolio_header.png" alt="Profile" />
